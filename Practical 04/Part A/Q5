@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int employeeNo;
+    float hoursWorked;
+    float overTimePayment;
+    int count = 0;
+    int totalEmployees = 0;
+
+    printf("Enter the Employee Number and Hours Worked (-999 to end):\n");
+
+    while (1) {
+        printf("Employee No: ");
+        scanf("%d", &employeeNo);
+
+        if (employeeNo == -999) {
+            break;
+        }
+
+        printf("Hours Worked: ");
+        scanf("%f", &hoursWorked);
+
+        if (hoursWorked <= 40) {
+            overTimePayment = 0;
+        } else {
+            overTimePayment = (hoursWorked - 40) * 200 + 40 * 150;
+        }
+
+        printf("Employee Number: %d\n", employeeNo);
+        printf("Over Time Payment: %.2f\n", overTimePayment);
+
+        if (overTimePayment > 4000) {
+            count++;
+        }
+
+        totalEmployees++;
+    }
+
+    float percentage = (float)count / totalEmployees * 100;
+    printf("Percentage of employees whose Over Time Payment exceeds Rs. 4000: %.2f%%\n", percentage);
+
+    return 0;
+}
+
+
+
