@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+ int byear,age;
+ float no1,no2,average;
+ char name[20];
+ double weight;
+ printf("Enter Birth Year\n");
+ scanf("%d",&byear);
+ printf("Enter First Number\n");
+ scanf("%f",&no1);
+ printf("Enter Second Number\n");
+ scanf("%f",&no2);
+ printf("Enter Your Name\n");
+ scanf("%s",&name);
+ printf("Enter Your Weight\n");
+ scanf("%if",&weight);
+ age=2023-byear;
+ average=(no1+no2)/2;
+ printf("\n\nAge is %d \n",age);
+ printf("Average is %.2f\n",average);
+ printf("Hey %s\n",name);
+ printf("Weight is %if\n",weight);
+
+}
