@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+int employeeNo;
+float basicSalary;
+int count = 0;
+
+printf("Enter the Employee Number and Basic Salary (-999 to end):\n");
+
+while (1){
+    printf("Employee No");
+    scanf("%d",&employeeNo);
+
+    if (employeeNo == -999){
+        break;
+    }
+    printf("Basic Salary");
+    scanf("%f",&basicSalary);
+
+    if (basicSalary >= 5000){
+        count++;
+    }
+}
+  printf("Number of employee with Basic Salary >= 5000: %d\n", count);
+
+  return 0;
+
+}
