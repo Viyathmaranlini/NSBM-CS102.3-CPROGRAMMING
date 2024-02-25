@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+ int num1, num2;
+
+ //read tho integers from the user
+ printf("Enter the first integer ");
+ scanf("%d", &num1);
+
+ printf("Enter the second integer ");
+ scanf("%d", &num2);
+
+ //first integer is a multiple of the second
+ if (num2 !=0 && num1 % num2 ==0) {
+    printf("%d is a multiple of %d\n", num1, num2);
+ } else{
+    printf("%d is a multiple of %d\n", num1, num2);
+ }
+
+  return 0;
+}
