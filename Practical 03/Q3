@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+float calculate_new_salary(float basic_salary) {
+    float increment;
+    if (basic_salary < 5000)
+        increment = 0.05 * basic_salary;
+    else if (basic_salary >= 5000 && basic_salary < 10000)
+        increment = 0.10 * basic_salary;
+    else
+        increment = 0.15 * basic_salary;
+    return basic_salary + increment;
+}
+
+int main() {
+    char employee_name[100];
+    float basic_salary, new_salary;
+
+    printf("Enter employee name: ");
+    scanf("%s", employee_name);
+
+    printf("Enter basic salary: ");
+    scanf("%f", &basic_salary);
+
+    new_salary = calculate_new_salary(basic_salary);
+
+    printf("\nEmployee Name: %s\n", employee_name);
+    printf("New Salary: %.2f\n", new_salary);
+
+    return 0;
+}
