@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+    float C,F;
+
+    printf("Enter Degrees Fahrenhe");
+    scanf("%f",&F);
+    C=(0.55)*(F-32);
+    printf("Temperature is % 2f",C);
+
+    return 0;
+}
