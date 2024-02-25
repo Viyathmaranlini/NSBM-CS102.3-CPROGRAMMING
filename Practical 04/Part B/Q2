@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+    char operator;
+    float num1, num2, result;
+
+    printf("Welcome to Simple Calculator\n");
+    printf("----------------------------\n");
+
+    // Display the menu
+    printf("Choose an operation:\n");
+    printf("1. Addition (+)\n");
+    printf("2. Subtraction (-)\n");
+    printf("3. Multiplication (*)\n");
+    printf("4. Division (/)\n");
+    printf("Enter your choice (1/2/3/4): ");
+
+    // Read the operator choice from the user
+    scanf(" %c", &operator);
+
+    // Prompt the user to enter two numbers
+    printf("Enter two numbers: ");
+    scanf("%f %f", &num1, &num2);
+
+    // Perform the selected operation
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            printf("Result: %.2f\n", result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("Result: %.2f\n", result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("Result: %.2f\n", result);
+            break;
+        case '/':
+            if (num2 != 0) {
+                result = num1 / num2;
+                printf("Result: %.2f\n", result);
+            } else {
+                printf("Error: Division by zero\n");
+            }
+            break;
+        default:
+            printf("Error: Invalid operator\n");
+    }
+
+    return 0;
+}
