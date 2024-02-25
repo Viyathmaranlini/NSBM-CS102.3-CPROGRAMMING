@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() {
+    float basic_salary, monthly_sales, gross_remuneration;
+    char city;
+
+    // Input basic salary, monthly sales, and city
+    printf("Enter the basic salary: ");
+    scanf("%f", &basic_salary);
+
+    printf("Enter the monthly sales amount: ");
+    scanf("%f", &monthly_sales);
+
+    printf("Enter the city (C for Colombo, any other character otherwise): ");
+    scanf(" %c", &city);
+
+    // Calculate additional allowance for salesmen with over 5 years' service
+    float additional_allowance = 0.0;
+    printf("Enter the years of service: ");
+    int years_of_service;
+    scanf("%d", &years_of_service);
+    if (years_of_service > 5) {
+        additional_allowance = 0.10 * basic_salary;
+    }
+
+    // Calculate additional allowance for salesmen working in Colombo
+    if (city == 'C' || city == 'c') {
+        additional_allowance += 2500.0;
+    }
+
+    // Calculate bonus
+    float bonus_percentage;
+    if (monthly_sales >= 0 && monthly_sales <= 25000) {
+        bonus_percentage = 10.0;
+    } else if (monthly_sales > 25000 && monthly_sales <= 50000) {
+        bonus_percentage = 12.0;
+    } else {
+        bonus_percentage = 15.0;
+    }
+    float bonus = (bonus_percentage / 100.0) * monthly_sales;
+
+    // Calculate gross remuneration
+    gross_remuneration = basic_salary + additional_allowance + bonus;
+
+    // Output the result
+    printf("\nGross monthly remuneration: %.2f\n", gross_remuneration);
+
+    return 0;
+}
