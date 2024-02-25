@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    float Dtra,Averagespeed;
+    int time;
+    printf("Enter distance travelled");
+    scanf("%f",&Dtra);
+    printf("Enter Time Taken");
+    scanf("%d",&time);
+    Averagespeed=Dtra/time;
+    printf("Average speed is %2f",Averagespeed);
+
+  return 0;
+}
