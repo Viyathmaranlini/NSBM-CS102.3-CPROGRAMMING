@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    // Prompt the user to input a character
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    // Convert the character to lowercase for ease of comparison
+    ch = tolower(ch);
+
+    // Check if the character is a vowel using switch statement
+    switch (ch) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            printf("%c is a vowel.\n", ch);
+            break;
+        default:
+            printf("%c is not a vowel.\n", ch);
+    }
+
+    return 0;
+}
