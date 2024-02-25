@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    float prices[10];
+    float sum = 0;
+    int count_above_200 = 0;
+
+    // Input prices of 10 items
+    printf("Enter prices of 10 items:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Enter price for item %d: ", i + 1);
+        scanf("%f", &prices[i]);
+
+        // Calculate sum for finding average later
+        sum += prices[i];
+
+        // Count items whose price is greater than 200
+        if (prices[i] > 200) {
+            count_above_200++;
+        }
+    }
+
+    // Calculate average value of an item
+    float average = sum / 10;
+
+    // Display the results
+    printf("\nAverage value of an item: %.2f\n", average);
+    printf("Number of items with price greater than 200: %d\n", count_above_200);
+
+    return 0;
+}
