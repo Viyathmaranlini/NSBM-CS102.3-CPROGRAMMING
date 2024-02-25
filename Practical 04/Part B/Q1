@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // Prompt the user to input an integer
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    // Check if the number is even or odd using switch
+    switch (number % 2) {
+        case 0:
+            printf("%d is an even number.\n", number);
+            break;
+        case 1:
+            printf("%d is an odd number.\n", number);
+            break;
+        default:
+            printf("Invalid input.\n");
+    }
+
+    return 0;
+}
