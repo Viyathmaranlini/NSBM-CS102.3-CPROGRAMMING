@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char letter;
+
+    printf("ASCII values for letters A to Z:\n");
+    
+    // Iterate through letters A to Z
+    for (letter = 'A'; letter <= 'Z'; letter++) {
+        printf("ASCII value of %c = %d\n", letter, letter);
+    }
+
+    return 0;
+}
