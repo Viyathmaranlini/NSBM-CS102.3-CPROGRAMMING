@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // Prompt the user to input a number
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    printf("Factors of %d are: ", number);
+
+    // Loop to find factors
+    for (int i = 1; i <= number; ++i) {
+        // Check if 'i' is a factor of 'number'
+        if (number % i == 0) {
+            printf("%d ", i);
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}
