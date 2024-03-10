@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+    unsigned long long factorial = 1;
+
+    // Prompt the user to input a number
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Check if the number is negative
+    if (number < 0) {
+        printf("Error: Factorial of a negative number is undefined.\n");
+        return 1; // Exit the program with an error code
+    }
+
+    // Calculate factorial using a for loop
+    for (int i = 1; i <= number; ++i) {
+        factorial *= i;
+    }
+
+    // Print the factorial
+    printf("Factorial of %d = %llu\n", number, factorial);
+
+    return 0;
+}
