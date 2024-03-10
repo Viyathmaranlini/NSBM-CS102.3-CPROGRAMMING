@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+    int sum = 0;
+
+    // Prompt the user to input numbers
+    printf("Enter numbers (enter -1 to stop):\n");
+
+    // Continue reading numbers until -1 is entered
+    while (1) {
+        scanf("%d", &num);
+
+        // Check if the input is -1, if yes, break out of the loop
+        if (num == -1) {
+            break;
+        }
+
+        // Add the input number to the sum
+        sum += num;
+    }
+
+    // Print the sum
+    printf("Sum of all numbers entered: %d\n", sum);
+
+    return 0;
+}
