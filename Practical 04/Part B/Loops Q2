@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int marks[10];
+    int total = 0;
+
+    // Prompt the user to input 10 marks
+    printf("Enter 10 marks:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Enter mark %d: ", i + 1);
+        scanf("%d", &marks[i]);
+        total += marks[i];
+    }
+
+    // Calculate the average
+    float average = (float)total / 10;
+
+    // Print the total and average
+    printf("Total marks: %d\n", total);
+    printf("Average marks: %.2f\n", average);
+
+    // Check if the average is less than 50 and print "Fail!" or "Pass!"
+    if (average < 50) {
+        printf("Fail!\n");
+    } else {
+        printf("Pass!\n");
+    }
+
+    return 0;
+}
